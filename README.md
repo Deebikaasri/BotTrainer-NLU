@@ -58,7 +58,6 @@ This dataset is used **directly inside prompts**, eliminating the need for model
   ],
   "entities": ["food_item", "quantity"]
 }
-```json
 {
   "name": "book_flight",
   "examples": [
