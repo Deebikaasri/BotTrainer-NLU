@@ -1,4 +1,3 @@
-# BotTrainer-NLU
 # 🤖 BotTrainer – LLM-Based NLU Model Trainer & Evaluator
 
 BotTrainer is an end-to-end **LLM-based Natural Language Understanding (NLU)** system that performs **intent classification** and **entity extraction** using **prompt engineering** instead of traditional machine learning classifiers.
@@ -43,28 +42,4 @@ The dataset defines:
 * Intent names
 * Example utterances
 * Entity schema per intent
-
-This dataset is used **directly inside prompts**, eliminating the need for model training.
-
-### Example Intent Definition
-
-````json
-{
-  "name": "order_food",
-  "examples": [
-    "Order a pizza",
-    "I want to buy a burger",
-    "Get me some food from a restaurant"
-  ],
-  "entities": ["food_item", "quantity"]
-}
-{
-  "name": "book_flight",
-  "examples": [
-    "Book a flight to Delhi",
-    "I want to go to Mumbai tomorrow"
-  ],
-  "entities": ["location", "date"]
-}
-
 
