@@ -81,7 +81,17 @@ streamlit run app.py
 
 ### 🧩Technologies Used
 - python
-- Stramlit
+- Streamlit
 - Scitkit learn
 - pandas
 - prompt engineering
+
+### 🎓 Learning Outcomes 
+
+- Basic knowledge of Python programming.
+- Familiarity with Streamlit for interactive web applications.
+- Understanding of Natural Language Processing (NLP) concepts like intents and entities.
+- Basic knowledge of Python programming.
+- Basic knowledge of prompt engineering for LLMs.
+
+  
