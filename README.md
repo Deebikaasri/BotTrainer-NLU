@@ -45,11 +45,11 @@ The system uses:
 ---
 ## 🗂️ Project Structure
 
-BotTrainer/
+BotTrainer
 │
-├── data/
+├── data
 │   └── eval_data.json
-├── prompts/
+├── prompts
 │   └── intent_prompt.txt
 ├── app.py
 ├── intent_classifier.py
@@ -94,7 +94,7 @@ streamlit run app.py
 - Basic knowledge of Python programming.
 - Basic knowledge of prompt engineering for LLMs.
 
-  ### 🔮 Future Enhancements
+### 🔮 Future Enhancements
   - Entity Extraction: Extend the system to extract multiple entities from messages.
   - Multi-Language Support: Support intents in multiple languages.
   - Custom Model Training: Allow fine-tuning of models on domain-specific data.
