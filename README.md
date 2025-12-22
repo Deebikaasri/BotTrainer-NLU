@@ -1,44 +1,203 @@
 # 🤖 BotTrainer – LLM-Based NLU Model Trainer & Evaluator
 
-BotTrainer is an end-to-end **LLM-based Natural Language Understanding (NLU)** system that performs **intent classification** and **entity extraction** using **prompt engineering** instead of traditional machine learning classifiers.
+BotTrainer is a modern Natural Language Understanding (NLU) framework built using Large Language Models (LLMs) to identify user intents and extract entities through prompt engineering, rather than relying on conventional machine-learning classifiers.
 
-The system follows a **JSON-first design**, uses a **local Gemma-3 model via Ollama**, and provides **evaluation metrics** along with an **interactive Streamlit web interface** for real-time testing.
+The system is designed around a JSON-centric dataset, runs locally using the Gemma-3 model via Ollama, and offers live predictions, evaluation metrics, and dataset insights through an intuitive Streamlit interface.
 
----
+🚀 Core Features
 
-## 📌 Project Objectives
+🔹 Intent recognition powered by LLM reasoning
 
-* Build an NLU pipeline using **Large Language Models (LLMs)**
-* Replace classical ML-based intent classifiers with **prompt-based inference**
-* Perform **intent detection** and **entity extraction** in a single step
-* Evaluate performance using:
+🔹 JSON-based intent and entity definitions
 
-  * Accuracy
-  * Precision
-  * Recall
-  * F1-score
-* Provide a **real-time chatbot-style UI** using Streamlit
-* Follow a **production-style project structure** suitable for academic and real-world use
+🔹 Prompt-driven structured responses
 
----
+🔹 Fully local inference using Gemma-3
 
-## 🧠 Key Features
+🔹 Built-in evaluation with performance metrics
 
-* 📄 **JSON-based intent & entity schema** (`intents.json`)
-* 🧩 **Prompt engineering** with schema-guided constraints
-* 🖥️ **Local LLM inference** using **Gemma-3** (via Ollama)
-* ✅ **Automatic JSON parsing & validation** of LLM output
-* 📊 **Evaluation pipeline** with confusion matrix
-* 🌐 **Streamlit web interface** for live intent testing
+🔹 Modular, scalable project organization
+
+🔹 Interactive dashboard for testing and analysis
+
+🎯 Project Goals
+
+Eliminate dependency on traditional intent classifiers
+
+Combine intent classification and entity extraction in a single inference step
+
+Ensure LLM outputs follow a strict JSON structure
+
+Measure NLU performance using standard evaluation metrics
+
+Provide an easy-to-use interface for experimentation
+
+Follow industry-standard ML project practices
+
+🧠 System Architecture Overview
+User Query
+   ↓
+Prompt Template + Intent Definitions
+   ↓
+Gemma-3 LLM (Ollama – Local Execution)
+   ↓
+Structured JSON Response
+   ↓
+Intent & Entity Extraction
+   ↓
+Evaluation Results & UI Display
+
+📦 Dataset Design
+1️⃣ Core Dataset – intents.json
+
+BotTrainer follows a JSON-first approach, where intent definitions are directly injected into the LLM prompt.
+
+Each intent includes:
+
+Intent label
+
+Example user queries
+
+Associated entity types
+
+Sample Structure
+{
+  "intents": [
+    {
+      "name": "book_flight",
+      "examples": [
+        "Book a flight to Delhi",
+        "I want to fly to Mumbai tomorrow"
+      ],
+      "entities": ["location", "date"]
+    }
+  ],
+  "entities": {
+    "location": ["Delhi", "Mumbai", "Chennai"],
+    "date": ["today", "tomorrow"]
+  }
+}
 
 
-## 📦 Dataset Design
+Why JSON-first?
 
-### Primary Dataset: `intents.json`
+✔ Directly consumed by the LLM
 
-The dataset defines:
+✔ No embeddings or vector stores required
 
-* Intent names
-* Example utterances
-* Entity schema per intent
+✔ Easy to modify and extend for new domains
 
+2️⃣ Evaluation Dataset – full_nlu_dataset_200.csv
+
+A flattened dataset generated from intents.json to support:
+
+Performance evaluation
+
+Metric computation
+
+Dataset visualization
+
+Dataset Columns
+
+Field	Description
+text	Input sentence
+true_intent	Expected intent
+🧪 Evaluation Methodology
+
+Number of intents: 10
+
+Test samples: One example per intent
+
+Total evaluation inputs: 10
+
+Evaluation Benefits
+
+Ensures equal coverage for all intents
+
+Avoids skew caused by repeated samples
+
+Enables transparent intent-wise validation
+
+Metrics Calculated
+
+Accuracy
+
+Precision (weighted)
+
+Recall (weighted)
+
+F1-Score (weighted)
+
+Confusion Matrix
+
+🗂️ Repository Structure
+INFOSIS_BOTTRAINER/
+│
+├── assets/                 # UI screenshots
+├── config/                 # Configuration files
+├── data/
+│   └── raw_data/           # Dataset files
+├── logs/                   # Application logs
+├── src/
+│   ├── components/         # Core logic modules
+│   ├── pipeline/           # End-to-end workflows
+│   └── utils/              # Utilities & helpers
+├── app.py                  # Streamlit app
+├── requirements.txt
+├── README.md
+└── .gitignore
+
+⚙️ Installation & Usage
+Install Dependencies
+pip install -r requirements.txt
+
+Download Gemma-3 Model
+ollama pull gemma3:latest
+
+Launch Application
+streamlit run app.py
+
+🧩 Technology Stack
+
+Python
+
+Streamlit
+
+Pandas
+
+Scikit-learn
+
+Ollama
+
+Gemma-3 LLM
+
+Prompt Engineering
+
+🎓 Skills & Learnings
+
+Building LLM-driven NLU pipelines
+
+Designing JSON-centric AI systems
+
+Structured prompt engineering
+
+Evaluating intent classification models
+
+Developing interactive ML dashboards
+
+Managing scalable ML project layouts
+
+👨‍💻 Developer
+S.Deebikaasri
+
+⭐ Planned Improvements
+
+Entity-level performance evaluation
+
+Visual confusion matrix heatmaps
+
+Prompt debugging and inspection tools
+
+Multi-model comparison support
+
+Containerized deployment using Docker
