@@ -94,4 +94,13 @@ streamlit run app.py
 - Basic knowledge of Python programming.
 - Basic knowledge of prompt engineering for LLMs.
 
+  ### 🔮 Future Enhancements
+  - Entity Extraction: Extend the system to extract multiple entities from messages.
+  - Multi-Language Support: Support intents in multiple languages.
+  - Custom Model Training: Allow fine-tuning of models on domain-specific data.
+  - Improved Evaluation Metrics: Add precision, recall, and F1-score evaluation.
+  - Analytics Dashboard: Visualize model performance trends using charts.
+  - Integration with Messaging Platforms: Connect with Slack, WhatsApp, or Telegram bots.
+  - User Feedback Loop: Collect user feedback to improve intent accuracy over time.
+
   
