@@ -80,11 +80,11 @@ ollama run gemma:3
 streamlit run app.py
 
 ### 🧩Technologies Used
-Python
-Streamlit
-Scikit-learn
-Pandas
-Ollama
-Gemma-3 LLM
-Prompt Engineering
+-Python
+-Streamlit
+-Scikit-learn
+-Pandas
+-Ollama
+-Gemma-3 LLM
+-Prompt Engineering
 
