@@ -48,13 +48,35 @@ The system uses:
 BotTrainer/
 │
 ├── data/
-│ └── eval_data.json # Evaluation dataset
+│   └── eval_data.json
 ├── prompts/
-│ └── intent_prompt.txt # Prompt template
-├── app.py # Streamlit application
-├── intent_classifier.py # LLM-based NLU logic
-├── evaluator_model.py # Evaluation & metrics
-├── requirements.txt # Dependencies
-└── README.md # Project documentation
-## 🗂️ Project Structure
+│   └── intent_prompt.txt
+├── app.py
+├── intent_classifier.py
+├── evaluator_model.py
+├── requirements.txt
+└── README.md
+
+## 📊 Evaluation Metrics
+
+The performance of the NLU system is evaluated using standard classification metrics:
+
+- Accuracy – Measures overall correctness of predictions
+- Precision – Measures correctness of predicted intents
+- Recall – Measures how well actual intents are identified
+- F1-score – Harmonic mean of precision and recall
+
+A confusion matrix is also generated to visualize prediction errors and analyze intent-level performance.
+
+## 🖥️ Run the Application
+
+### Install dependencies
+pip install -r requirements.txt
+
+### Start the local LLM
+ollama run gemma:3
+
+### Run the Streamlit app
+streamlit run app.py
+
 
