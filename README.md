@@ -55,6 +55,8 @@ The performance of the NLU system is evaluated using standard classification met
 
 A confusion matrix is also generated to visualize prediction errors and analyze intent-level performance.
 
+---
+
 ## 🖥️ Run the Application
 
 ### Install dependencies
@@ -73,6 +75,8 @@ streamlit run app.py
 - pandas
 - prompt engineering
 
+  ---
+
 ### 🎓 Learning Outcomes 
 
 - Basic knowledge of Python programming.
@@ -80,6 +84,8 @@ streamlit run app.py
 - Understanding of Natural Language Processing (NLP) concepts like intents and entities.
 - Basic knowledge of Python programming.
 - Basic knowledge of prompt engineering for LLMs.
+
+  ---
 
 ### 🔮 Future Enhancements
   - Entity Extraction: Extend the system to extract multiple entities from messages.
