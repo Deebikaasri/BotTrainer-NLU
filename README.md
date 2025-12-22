@@ -45,17 +45,20 @@ The system uses:
 ---
 ## 🗂️ Project Structure
 
-BotTrainer
+BotTrainer/
 │
-├── data
-│   └── eval_data.json
-├── prompts
-│   └── intent_prompt.txt
-├── app.py
-├── intent_classifier.py
-├── evaluator_model.py
-├── requirements.txt
-└── README.md
+├── data/
+│   └── eval_data.json         # JSON dataset for evaluation and testing
+│
+├── prompts/
+│   └── intent_prompt.txt      # Prompt template used for intent classification
+│
+├── app.py                     # Streamlit web app for testing intents interactively
+├── intent_classifier.py       # Module that classifies intents using LLMs
+├── evaluator_model.py         # Module for evaluating model performance on dataset
+├── requirements.txt           # Python dependencies for the project
+└── README.md                  # Project documentation
+
 
 ## 📊 Evaluation Metrics
 
