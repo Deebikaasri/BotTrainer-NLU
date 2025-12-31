@@ -1,23 +1,34 @@
 import json
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix
+from sklearn.metrics import accuracy_score, precision_recall_fscore_support, confusion_matrix
+from intent_classifier import classify_intent
 
-EVAL_FILE = r"C:\Users\kamal\OneDrive\Desktop\BotTrainer\eval_data.json"
+def evaluate_model(eval_file="eval_data.json"):
+    with open(eval_file, "r", encoding="utf-8") as f:
+        eval_data = json.load(f)["eval_data"]
 
-with open(EVAL_FILE, "r", encoding="utf-8") as f:
-    eval_data = json.load(f)
+    true_intents = []
+    predicted_intents = []
 
-y_true = [item["intent"] for item in eval_data]
-y_pred = [item["predicted_intent"] for item in eval_data]
+    for item in eval_data:
+        intent_name = item["intent"]
+        for example in item["examples"]:
+            true_intents.append(intent_name)
+            result = classify_intent(example)
+            predicted_intents.append(result["intent"])
 
-accuracy = accuracy_score(y_true, y_pred)
-precision = precision_score(y_true, y_pred, average="weighted", zero_division=0)
-recall = recall_score(y_true, y_pred, average="weighted", zero_division=0)
-f1 = f1_score(y_true, y_pred, average="weighted", zero_division=0)
+    accuracy = accuracy_score(true_intents, predicted_intents)
+    precision, recall, f1, _ = precision_recall_fscore_support(
+        true_intents, predicted_intents, average="weighted", zero_division=0
+    )
 
-print(f"Accuracy : {accuracy:.2f}")
-print(f"Precision: {precision:.2f}")
-print(f"Recall   : {recall:.2f}")
-print(f"F1-score : {f1:.2f}")
+    cm = confusion_matrix(true_intents, predicted_intents)
+    labels = sorted(list(set(true_intents)))
 
-print("\nConfusion Matrix:")
-print(confusion_matrix(y_true, y_pred))
+    return {
+        "accuracy": accuracy,
+        "precision": precision,
+        "recall": recall,
+        "f1": f1,
+        "confusion_matrix": cm,
+        "labels": labels
+    }
