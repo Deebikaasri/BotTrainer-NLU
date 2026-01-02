@@ -78,8 +78,6 @@ streamlit run app.py
   ---
 ## 📂 Project Structure
 
-## 📂 Project Structure
-
 ```
      BotTrainer-NLU/
     |
