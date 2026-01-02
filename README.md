@@ -78,21 +78,24 @@ streamlit run app.py
   ---
 ## 📂 Project Structure
 
-TeamA_Final_Project/
-│
-└── BotTrainer-NLU/
-│
-├── data/
-│ └── eval_data.json
-│
-├── prompts/
-│ └── intent_prompt.txt
-│
-├── app.py
-├── evaluator_model.py
-├── intent_classifier.py
-├── requirements.txt
-└── README.md
+## 📂 Project Structure
+
+```
+     BotTrainer-NLU/
+    |
+    ├── data/
+    |   └── eval_data.json
+    |
+    ├── prompts/
+    |   └── intent_prompt.txt
+    |
+    ├── app.py
+    ├── evaluator_model.py
+    ├── intent_classifier.py
+    ├── requirements.txt
+    └── README.md
+```
+
 
 
 ### 🎓 Learning Outcomes 
