@@ -1,252 +1,110 @@
 {
-  "eval_data": [
-    {
-      "intent": "greet_user",
-      "examples": [
-        "Hi there, how are you?",
-        "Good morning assistant!",
-        "Hey, what's up?"
-      ]
-    },
-    {
-      "intent": "exit_chat",
-      "examples": [
-        "I need to leave now",
-        "Close this chat, please",
-        "Bye, see you later"
-      ]
-    },
-    {
-      "intent": "express_gratitude",
-      "examples": [
-        "Thanks a lot for your help!",
-        "I really appreciate it",
-        "Much obliged"
-      ]
-    },
-    {
-      "intent": "weather_query",
-      "examples": [
-        "Is it going to rain today in Delhi?",
-        "What's the temperature in Bangalore?",
-        "Tell me if tomorrow is sunny"
-      ]
-    },
-    {
-      "intent": "travel_booking",
-      "examples": [
-        "Book a train ticket to Mumbai",
-        "I need a flight to Jaipur next week",
-        "Plan a trip to Hyderabad"
-      ]
-    },
-    {
-      "intent": "food_request",
-      "examples": [
-        "Order me some pizza",
-        "I want to eat a burger",
-        "Get me a cake from nearby shop"
-      ]
-    },
-    {
-      "intent": "news_update",
-      "examples": [
-        "Show me top news today",
-        "Any updates from the world?",
-        "Latest headlines please"
-      ]
-    },
-    {
-      "intent": "reminder_set",
-      "examples": [
-        "Remind me to call mom at 6 PM",
-        "Set a reminder for tomorrow morning",
-        "Alert me next Monday at 9 AM"
-      ]
-    },
-    {
-      "intent": "music_request",
-      "examples": [
-        "Play relaxing music",
-        "Start workout playlist",
-        "I want jazz songs"
-      ]
-    },
-    {
-      "intent": "time_query",
-      "examples": [
-        "What time is it right now?",
-        "Give me current time",
-        "Time please"
-      ]
-    },
-    {
-      "intent": "date_query",
-      "examples": [
-        "What's the date today?",
-        "Tell me today's date",
-        "Which day is it?"
-      ]
-    },
-    {
-      "intent": "joke_request",
-      "examples": [
-        "Tell me something funny",
-        "Make me laugh",
-        "I want a joke"
-      ]
-    },
-    {
-      "intent": "cab_request",
-      "examples": [
-        "Book a cab to office",
-        "I need a taxi to airport",
-        "Call a cab for me"
-      ]
-    },
-    {
-      "intent": "definition_query",
-      "examples": [
-        "Explain AI in simple terms",
-        "What does deep learning mean?",
-        "Define blockchain for me"
-      ]
-    },
-    {
-      "intent": "math_addition",
-      "examples": [
-        "Add 12 and 18",
-        "What's 45 plus 55?",
-        "Calculate sum of 20 and 30"
-      ]
-    },
-    {
-      "intent": "holiday_query",
-      "examples": [
-        "Is Friday a holiday?",
-        "Any holidays this month?",
-        "Next public holiday details please"
-      ]
-    },
-    {
-      "intent": "location_query",
-      "examples": [
-        "Where am I currently?",
-        "Show my location",
-        "Detect current place"
-      ]
-    },
-    {
-      "intent": "assistant_info",
-      "examples": [
-        "Who built you?",
-        "Tell me about yourself",
-        "What can you do?"
-      ]
-    },
-    {
-      "intent": "contact_query",
-      "examples": [
-        "Give customer support contact",
-        "How can I reach helpdesk?",
-        "Share office phone number"
-      ]
-    },
-    {
-      "intent": "fact_request",
-      "examples": [
-        "Tell a fun science fact",
-        "Give me a random fact",
-        "Interesting fact please"
-      ]
-    },
-    {
-      "intent": "exercise_request",
-      "examples": [
-        "Suggest exercises for today",
-        "I want a workout plan",
-        "Give me fitness tips"
-      ]
-    },
-    {
-      "intent": "movie_request",
-      "examples": [
-        "Recommend a good movie",
-        "Suggest a film to watch",
-        "What movie should I see tonight?"
-      ]
-    },
-    {
-      "intent": "shopping_request",
-      "examples": [
-        "Order a laptop online",
-        "I need to buy groceries",
-        "Add a phone to cart"
-      ]
-    },
-    {
-      "intent": "currency_conversion",
-      "examples": [
-        "Convert 200 USD to INR",
-        "How much is 100 EUR in USD?",
-        "Exchange 50 GBP to JPY"
-      ]
-    },
-    {
-      "intent": "alarm_set",
-      "examples": [
-        "Set an alarm for 6 AM",
-        "Wake me up at 7 AM tomorrow",
-        "Add alarm at 5 PM"
-      ]
-    },
-    {
-      "intent": "todo_add",
-      "examples": [
-        "Add 'finish homework' to my todo",
-        "Remind me to call mom",
-        "Put 'email boss' in todo list"
-      ]
-    },
-    {
-      "intent": "todo_show",
-      "examples": [
-        "Show my pending tasks",
-        "What are my todos today?",
-        "List my reminders"
-      ]
-    },
-    {
-      "intent": "alarm_query",
-      "examples": [
-        "List all alarms set",
-        "Do I have any alarms?",
-        "Show next alarm"
-      ]
-    },
-    {
-      "intent": "book_hotel",
-      "examples": [
-        "Book a hotel in Jaipur",
-        "I need a room in Delhi tomorrow",
-        "Reserve hotel in Mumbai"
-      ]
-    },
-    {
-      "intent": "flight_status",
-      "examples": [
-        "Check status of flight DL123",
-        "Is flight AI101 on time?",
-        "Track BA256 flight"
-      ]
-    },
-    {
-      "intent": "currency_rate",
-      "examples": [
-        "Current USD to INR rate?",
-        "Exchange rate for EUR today",
-        "How much is 1 GBP in INR?"
-      ]
-    }
-  ]
+  "intents": [
+    { "name": "greet_user", "examples": ["[Hello](intent_type)", "[Hi](intent_type)", "[Hey](intent_type)", "[Good morning](intent_type)"], "entities": ["intent_type"] },
+    { "name": "exit_chat", "examples": ["[Bye](intent_type)", "[Exit](intent_type)", "[See you later](intent_type)"], "entities": ["intent_type"] },
+    { "name": "express_gratitude", "examples": ["[Thanks](intent_type)", "[Thank you](intent_type)", "[Much appreciated](intent_type)"], "entities": ["intent_type"] },
+
+    { "name": "weather_query", "examples": ["Weather in [Delhi](city)", "Will it rain [tomorrow](day)?", "Show me weather for [Mumbai](city) [today](day)"], "entities": ["city", "day"] },
+    { "name": "travel_booking", "examples": ["Book a trip to [Mumbai](city)", "Tickets to [Pune](city) [next week](travel_date)", "I want to travel to [Bangalore](city) [this weekend](travel_date)"], "entities": ["city", "travel_date"] },
+    { "name": "book_hotel", "examples": ["Book hotel in [Jaipur](city)", "Need hotel in [Delhi](city) [this weekend](travel_date)", "Reserve hotel at [Hyderabad](city) [next week](travel_date)"], "entities": ["city", "travel_date"] },
+    { "name": "flight_status", "examples": ["Check flight [AI101](flight_number)", "Track [BA256](flight_number)", "Flight status for [AI101](flight_number)"], "entities": ["flight_number"] },
+
+    { "name": "food_request", "examples": ["Order [pizza](dish)", "I want [pasta](dish)", "Get me a [burger](dish)"], "entities": ["dish"] },
+    { "name": "cab_request", "examples": ["Book cab to [airport](destination)", "Taxi to [office](destination)", "I need a ride to [home](destination)"], "entities": ["destination"] },
+
+    { "name": "news_update", "examples": ["Latest [news](news_type)", "Top [stories](news_type)", "Give me [breaking](news_type) news"], "entities": ["news_type"] },
+    { "name": "fact_request", "examples": ["Tell me a [tech](fact_type) fact", "I want a [general](fact_type) fact", "Give me an interesting [fact](fact_type)"], "entities": ["fact_type"] },
+    { "name": "joke_request", "examples": ["Tell a [joke](joke_type)", "Make me laugh", "I want a funny [joke](joke_type)"], "entities": ["joke_type"] },
+
+    { "name": "music_request", "examples": ["Play [jazz](music_type) music", "[Workout](music_type) songs", "Play some [soft](music_type) music"], "entities": ["music_type"] },
+    { "name": "movie_request", "examples": ["Recommend a [movie](movie_type)", "What should I watch?", "Give me a [comedy](movie_type) movie"], "entities": ["movie_type"] },
+
+    { "name": "time_query", "examples": ["What is the [current time](time_type)?", "Tell me the [current time](time_type)", "Current [time](time_type)", "What time is it?"], "entities": ["time_type"] },
+    { "name": "date_query", "examples": ["Today's [date](date_type)", "What is the [date](date_type)?", "Show me [today's date](date_type)"], "entities": ["date_type"] },
+
+    { "name": "definition_query", "examples": ["Define [AI](concept)", "Explain [blockchain](concept)", "What is [cloud computing](concept)?"], "entities": ["concept"] },
+    { "name": "assistant_info", "examples": ["What can you do?", "Who created you?", "Tell me your [capabilities](assistant_feature)"], "entities": ["assistant_feature"] },
+
+    { "name": "math_addition", "examples": ["Add [10](value) and [20](value)", "Sum of [5](value) and [9](value)", "Calculate [5](value) + [10](value)"], "entities": ["value"] },
+    { "name": "currency_conversion", "examples": ["Convert [100](amount) [USD](from_currency) to [INR](to_currency)", "Change [500](amount) [EUR](from_currency) to [USD](to_currency)"], "entities": ["amount", "from_currency", "to_currency"] },
+
+    { "name": "holiday_query", "examples": ["Is [today](holiday_date) a holiday?", "Next holiday?", "Show [next week's](holiday_date) holiday"], "entities": ["holiday_date"] },
+    { "name": "location_query", "examples": ["Where am I?", "My [location](location_type)", "Show my current [location](location_type)"], "entities": ["location_type"] },
+
+    { "name": "shopping_request", "examples": ["Buy [laptop](item)", "Order [groceries](item)", "I need a [phone](item)"], "entities": ["item"] },
+    { "name": "contact_query", "examples": ["[Support](service) number", "Customer care", "Call [helpdesk](service)"], "entities": ["service"] },
+
+    { "name": "alarm_set", "examples": ["Set alarm at [6 AM](alarm_time)", "Wake me up at [7 AM](alarm_time)"], "entities": ["alarm_time", "alarm_date"] },
+    { "name": "alarm_query", "examples": ["Show alarms", "Any alarms?", "What alarms are set?"], "entities": ["alarm_time"] },
+
+    { "name": "todo_add", "examples": ["Add [buy milk](task)", "Add task [call mom](task)", "Add [email John](task)"], "entities": ["task"] },
+    { "name": "todo_show", "examples": ["Show todo list", "What are my tasks?"], "entities": ["task"] },
+
+    { "name": "reminder_set", "examples": ["Remind me at [9 AM](reminder_time)", "Remind me [tomorrow](reminder_date) at [9 AM](reminder_time)"], "entities": ["reminder_time", "reminder_date"] },
+
+    { "name": "exercise_request", "examples": ["Suggest [workout](exercise_type)", "[Fitness](exercise_type) tips", "Give me [workout](exercise_type) routines"], "entities": ["exercise_type"] },
+
+    { "name": "email_send", "examples": ["Send email to [boss](contact_type)", "Email [manager](contact_type)"], "entities": ["contact_type"] },
+    { "name": "meeting_schedule", "examples": ["Schedule meeting [tomorrow](meeting_date)", "Set a meeting for [tomorrow](meeting_date)"], "entities": ["meeting_date"] },
+
+    { "name": "password_reset", "examples": ["Reset my password", "Change my password"], "entities": ["service"] },
+    { "name": "internet_issue", "examples": ["[Internet](issue_type) not working", "My [internet](issue_type) is down"], "entities": ["issue_type"] },
+
+    { "name": "battery_status", "examples": ["Battery percentage", "Show my [phone](device_type) battery"], "entities": ["device_type"] },
+    { "name": "device_restart", "examples": ["Restart [phone](device_type)", "Restart [laptop](device_type)"], "entities": ["device_type"] },
+
+    { "name": "file_search", "examples": ["Find my [document](file_type)", "Search for [pdf](file_type)"], "entities": ["file_type"] },
+    { "name": "file_delete", "examples": ["Delete [pdf](file_type) file", "Remove [document](file_type)"], "entities": ["file_type"] },
+
+    { "name": "language_change", "examples": ["Change language to [English](language)", "Switch to [Hindi](language)"], "entities": ["language"] },
+    { "name": "theme_change", "examples": ["Enable [dark](theme_type) mode", "Switch to [light](theme_type) mode"], "entities": ["theme_type"] },
+
+    { "name": "feedback_submit", "examples": ["Give [feedback](feedback_type)", "Submit [positive](feedback_type) feedback"], "entities": ["feedback_type"] },
+    { "name": "complaint_register", "examples": ["Register complaint", "Submit [internet](issue_type) complaint"], "entities": ["issue_type"] },
+
+    { "name": "profile_update", "examples": ["Update my [profile](profile_field)", "Change my [email](profile_field)"], "entities": ["profile_field"] },
+    { "name": "logout_user", "examples": ["Log me [out](intent_type)", "Sign me [out](intent_type)"], "entities": ["intent_type"] }
+  ],
+
+  "entities": {
+    "city": ["Delhi", "Mumbai", "Bangalore", "Hyderabad", "Pune", "Jaipur", "Chennai", "Kolkata"],
+    "day": ["today", "tomorrow"],
+    "travel_date": ["next week", "this weekend"],
+    "dish": ["pizza", "burger", "pasta", "idli"],
+    "destination": ["home", "office", "airport"],
+    "flight_number": ["AI101", "BA256"],
+    "news_type": ["latest", "breaking"],
+    "fact_type": ["tech", "general"],
+    "joke_type": ["general"],
+    "music_type": ["jazz", "soft", "workout"],
+    "movie_type": ["action", "comedy", "drama"],
+    "time_type": ["current_time"],
+    "date_type": ["today_date"],
+    "concept": ["AI", "blockchain", "cloud computing"],
+    "assistant_feature": ["capabilities", "creator"],
+    "value": ["5", "9", "10", "20"],
+    "amount": ["100", "500"],
+    "from_currency": ["USD", "EUR"],
+    "to_currency": ["INR", "USD"],
+    "holiday_date": ["today", "next week"],
+    "location_type": ["current_location"],
+    "item": ["laptop", "phone", "groceries"],
+    "service": ["customer support", "helpdesk"],
+    "alarm_time": ["6 AM", "7 AM"],
+    "alarm_date": ["today", "tomorrow"],
+    "task": ["buy milk", "call mom"],
+    "reminder_time": ["9 AM"],
+    "reminder_date": ["tomorrow"],
+    "exercise_type": ["fitness", "workout"],
+    "contact_type": ["boss", "manager"],
+    "meeting_date": ["tomorrow"],
+    "issue_type": ["internet", "login"],
+    "device_type": ["phone", "laptop"],
+    "file_type": ["pdf", "document"],
+    "language": ["English", "Hindi"],
+    "theme_type": ["dark", "light"],
+    "feedback_type": ["positive", "negative"],
+    "profile_field": ["name", "email"],
+    "intent_type": ["greet", "exit", "logout"]
+  }
 }
