@@ -1,0 +1,40 @@
+import csv
+import os
+from datetime import datetime
+
+# Logs directory
+LOG_DIR = "logs"
+LOG_FILE = os.path.join(LOG_DIR, "chat_logs.csv")
+
+
+def log_interaction(user_input, intent, confidence, entities):
+    """
+    Logs each user interaction into logs/chat_logs.csv
+    """
+
+    # Create logs directory if not exists
+    if not os.path.exists(LOG_DIR):
+        os.makedirs(LOG_DIR)
+
+    file_exists = os.path.isfile(LOG_FILE)
+
+    with open(LOG_FILE, mode="a", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+
+        # Write header only once
+        if not file_exists:
+            writer.writerow([
+                "timestamp",
+                "user_input",
+                "intent",
+                "confidence",
+                "entities"
+            ])
+
+        writer.writerow([
+            datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            user_input,
+            intent,
+            confidence,
+            entities
+        ])
